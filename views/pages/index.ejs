@@ -1,0 +1,23 @@
+<% include header.ejs %>
+<form action="/" method="post" class="ui form">
+
+    <div class="field">
+        <label for="message ">message </label>
+        <textarea name="message" id="message"></textarea>
+    </div>
+            <button type="submit" class="ui blue labeled submit icon button">
+                <i class="icon edit"></i> send
+            </button>
+</form>
+<br>
+<div class="ui container">
+
+    <%for(message of messages){%>
+
+    <div class="ui olive mini message"><%= message.message %>
+        <p><small><%= message.date %></small></p>
+    </div>
+    <%}%>
+</div>
+
+<% include footer.ejs %>

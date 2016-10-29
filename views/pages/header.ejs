@@ -1,0 +1,45 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html lang="en">
+<head>
+    <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+    <title>Example App</title>
+    <link rel="stylesheet" href="/semantic/semantic.min.css">
+</head>
+<body>
+<div class="ui fixed inverted menu">
+
+    <a href="/" class="header item">Hello</a>
+
+</div>
+
+<br><br>
+
+<% if (locals.flash && locals.flash.ERROR) { %>
+<div class="ui error message container">
+    <i class="close icon"></i>
+
+    <div class="header">
+        <%= locals.flash.ERROR %>
+    </div>
+
+    <div>
+        Le message est vide amigo !!
+    </div>
+</div>
+<% }else if(locals.flash && locals.flash.SUCCESS) { %>
+
+<div class="ui success message container">
+    <i class="close icon"></i>
+
+    <div class="header">
+        <%= locals.flash.SUCCESS %>
+    </div>
+
+    <p>
+        Ajouté !!
+    </p>
+</div>
+
+<% } %>
+
+<div class="ui main container">
